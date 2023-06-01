@@ -1,0 +1,45 @@
+menu {
+    background-color: white;
+    margin-top: 0px;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+}
+
+body {
+    background-color: #f5f5f5;
+    color: black;
+    font-family: Arial;
+    margin: 0px;
+}
+
+header {
+    background: linear-gradient(to right, #e5f0f8, #e1ecf4, #e2edf5, #e6f1f9);
+    text-align: right;
+    color: gray;
+    font-size: 12px;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+
+}
+
+main {
+    margin: 10px 20px;
+}
+
+footer {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    text-align: right;
+    position: relative;
+    top: 25%;
+}
+
+
+a:hover {
+    color: red;
+    background-color: white;
+    transition: 50ms linear;
+    transition-property: all;
+}
+
+

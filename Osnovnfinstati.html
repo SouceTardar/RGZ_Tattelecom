@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные финансовые показатели</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        
+        .table {
+            border: 1 solid;
+            border-radius: 15px;
+            margin: 30px;
+            margin-left: 50px;
+            width: 600px;
+            height: 30%;
+            display: inline-flexbox;
+        }
+        .rub:after {
+            content: ' \20BD';
+        }
+        .text {
+            margin: 50px;
+            color: black;
+        }
+        .block {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            border: 1px solid;
+            border-radius: 15px;
+            border-color: white;
+            background-color: white;
+            margin-top: 0px;
+            box-shadow: 0 0 5px 2px rgb(170, 168, 168);
+            position: static;
+            height: 100px;
+            width: 400px;
+        }
+        .content {
+            margin-left: 1%;
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            position: relative;
+            top: -30px;
+            
+        }
+    </style>
+    <script>
+        function stocks() {
+            let exchange = [0.752, 0.768, 0.7785, 0.7815, 0.795, 0.7625, 0.7745, 0.7735, 0.792, 0.8115, 0.866, 0.852, 0.85, 0.857, 0.8255, 0.81, 0.804, 0.7685, 0.7775, 0.7315]
+            
+            let sum = 0
+            for(let i = 0; i < exchange.length; i++) {
+                sum = sum + exchange[i];
+            }
+            let average = sum / exchange.length;
+            let standdev = Math.sqrt(average)
+            let min = Math.min.apply(Math, exchange)
+            let max = Math.max.apply(Math, exchange)
+
+            document.getElementById('stad').innerHTML = standdev;
+            document.getElementById('max').innerHTML = max;
+            document.getElementById('min').innerHTML = min;
+        }
+    </script>
+</head>
+<body onload="stocks()">
+    <header>
+        <div style=" position: relative; text-align: left; top: 10px;">
+            <a href="https://my.tattelecom.ru"><img src="files/Tattelecom-logo2.png" height="20px"> </a>
+        </div>
+        <div style="position: relative; top: -10px;">
+            НГТУ, ФБ-12, РГЗ, Штангауэр Максим
+        </div>
+    </header>
+    <menu>
+        <a href="https://letai.ru"><img src="files/Logo.jpg"></a>
+        <a href="Ocampanii.html" class="content" style="margin-left: 900px;">О компании</a>
+        <a href="Osnovnfinstati.html" class="content" style="font-weight: bold; color: red;">Основные финансовые показатели</a>
+        <a href="contact.html" class="content">Контактные данные</a>
+        <a href="video.html" class="content">Видео</a>
+    </menu>
+    
+    <div class="text" style="font-size: 28px;">
+        <b>Основные финансовые показатели.</b>
+    </div>
+    <div class="text">
+        <p>
+            На странице вы можете ознакомится с основными финансовыми показателями компании <b>ПАО "<i>«Таттелеком»</i>"</b>.
+        </p>
+        <a href="https://www.moex.com/ru/marketdata/?nc=505450#/mode=instrument&secid=TTLK&boardgroupid=57&mode_type=history&date_from=2018-04-01&date_till=2023-04-30">
+            Источник - Московская фондовая биржа
+        </a>
+    </div>
+    <div class="block">
+        <b style="font-size: 20px;">Капитализация на конец Апреля 2023г.</b>
+            <div class="rub" style="padding: 20px; font-size: 24px;">
+                <b>2 335 310 000</b> 
+            </div>
+    </div>  
+    <div class="block" style="font-size: 20px;">
+        <b>Общее число акций Апреля 2023г.</b>
+            <div style="padding: 20px; font-size: 24px;">
+                <b>146 284 <span style="color: gray; font-size: 20px;">шт</span></b>
+            </div>
+    </div>
+    
+            <table class="table" border="1 solid" >
+                <caption>Таблица - "Цена акция Таттелеком по дням за Апрель 2023г"</caption>
+                <tr>
+                    <th>Дата</th>
+                    <th>Цена</th>
+                </tr>
+                <tr><td>03.04.2023</td><td>0.752</td></tr>
+                <tr><td>04.04.2023</td><td>0.768</td></tr>
+                <tr><td>05.04.2023</td><td>0.7785</td></tr>
+                <tr><td>06.04.2023</td><td>0.7815</td></tr>
+                <tr><td>07.04.2023</td><td>0.795</td></tr>
+                <tr><td>10.04.2023</td><td>0.7625</td></tr>
+                <tr><td>11.04.2023</td><td>0.7745</td></tr>
+                <tr><td>12.04.2023</td><td>0.7735</td></tr>
+                <tr><td>13.04.2023</td><td>0.792</td></tr>
+                <tr><td>14.04.2023</td><td>0.8115</td></tr>
+                <tr><td>17.04.2023</td><td>0.866</td></tr>
+                <tr><td>18.04.2023</td><td>0.852</td></tr>
+                <tr><td>19.04.2023</td><td>0.85</td></tr>
+                <tr><td>20.04.2023</td><td>0.857</td></tr>
+                <tr><td>21.04.2023</td><td>0.8255</td></tr>
+                <tr><td>24.04.2023</td><td>0.81</td></tr>
+                <tr><td>25.04.2023</td><td>0.804</td></tr>
+                <tr><td>26.04.2023</td><td>0.7685</td></tr>
+                <tr><td>27.04.2023</td><td>0.7775</td></tr>
+                <tr><td>28.04.2023</td><td>0.7315</td></tr>
+            </table>     
+
+    <div class="text" style="font-size: 24px;">
+        <b>Расчётные значения на основе цен закрытие торгов:</b>
+    </div>
+            
+    <div class="block">
+        <b style="font-size: 20px;">Минимальное значение:</b>
+            <div id="min" class="rub" style="padding: 20px; font-size: 24px;">
+                
+            </div>
+    </div>
+
+    <div class="block">
+        <b style="font-size: 20px;">Максимальное значение:</b>
+            <div id="max" class="rub" style="padding: 20px; font-size: 24px;">
+                
+            </div>
+    </div>
+
+    <div class="block">
+        <b style="font-size: 20px;">Среднеквадратическое отклонение:</b>
+            <div id="stad" style="padding: 20px; font-size: 24px;">
+            </div>
+    </div>
+    
+    <footer>
+        <div>&copy; Штангауэр Максим, ФБИ-12, 2 курс, 2023</div>
+    </footer>
+        
+    
+</body>
+</html>
